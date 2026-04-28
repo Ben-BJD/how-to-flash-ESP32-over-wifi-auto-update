@@ -13,8 +13,8 @@
 //We will also use the built-in LED to indicate when the device is in configuration mode.
 #define LED_PIN 8 // GPIO8 typically connected to onboard LED or use an external LED if not available
 
-#define BLINK_DELAY 2000
-#define FIRMWARE_VERSION "0.1" // Firmware version string
+#define BLINK_DELAY 500
+#define FIRMWARE_VERSION "1.0" // Firmware version string
 // GitHub owner/org change this to your GitHub username or organization name
 #define GITHUB_OWNER "Ben-BJD"
 // GitHub repo name where releases are published change this to your repository name
