@@ -1,0 +1,8 @@
+[wokwi]
+version = 1
+elf = ".pio/build/seeed_xiao_esp32c3/firmware.elf"
+firmware = ".pio/build/seeed_xiao_esp32c3/firmware.bin"
+
+[[binaries]]
+file = '.pio/build/seeed_xiao_esp32c3/partitions.bin'
+address = 0x8000

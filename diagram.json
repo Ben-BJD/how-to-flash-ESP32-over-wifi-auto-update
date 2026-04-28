@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-xiao-esp32-c3", "id": "esp", "top": 38.97, "left": 13.78, "attrs": {"flashSize": "4","partitionTable": "ota_partitions.csv"} },
+    { "type": "wokwi-led", "id": "led1", "top": 6, "left": 133, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 60,
+      "left": 87.6,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 130.1,
+      "left": 119.5,
+      "rotate": 180,
+      "attrs": { "color": "red", "xray": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 110.1,
+      "left": 120.5,
+      "attrs": { "value": "10000" }
+    }
+   
+  ],
+  "connections": [
+    [ "esp:D8", "led1:A", "green", [ "h0" ] ],
+    [ "led1:C", "r1:1", "black", [ "v0" ] ],
+    [ "esp:GND", "r1:2", "black", [ "v0" ] ],
+
+    [ "esp:GND", "r2:1", "black", [ "h10", "v0", "h0", "v0" ]  ],
+    [ "esp:3V3", "btn1:1.r", "red", [ "h30", "v0", "h0", "v0" ] ],
+    [ "esp:D1", "btn1:2.l", "MediumSeaGreen", [ "v-57", "h20", "v0", "h0" ] ],
+    [ "esp:D1", "r2:2", "MediumSeaGreen", [ "v-57", "h20", "v0", "h0" ]  ]
+  ],
+  "dependencies": {}
+}
