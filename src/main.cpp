@@ -359,8 +359,8 @@ void setup()
     // CUSTOMIZE THE MENU
     // ==========================================================
     // Available options: "wifi", "wifinoscan", "info", "param", "close", "sep", "erase", "restart", "exit"
-    // Let's remove all but the configuration and update options to simplify the user experience.
-    std::vector<const char *> menu = {"wifi", "sep", "update"};
+    // Let's remove all but the configuration to simplify the user experience.
+    std::vector<const char *> menu = {"wifi", "sep"};
     wm.setMenu(menu);
 
     //Custom Title
